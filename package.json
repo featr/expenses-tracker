@@ -1,0 +1,52 @@
+{
+	"name": "indecision",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "evule",
+	"license": "MIT",
+	"scripts": {
+		"build": "webpack",
+		"dev-server": "webpack-dev-server",
+		"test": "jest --config=jest.config.json",
+		"live-test": "jest --watchAll"
+	},
+	"dependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-core": "^6.26.3",
+		"babel-loader": "^7.1.5",
+		"babel-plugin-transform-class-properties": "^6.24.1",
+		"babel-plugin-transform-object-rest-spread": "^6.26.0",
+		"babel-preset-env": "^1.7.0",
+		"babel-preset-react": "^6.24.1",
+		"css-loader": "^1.0.0",
+		"enzyme": "^3.4.4",
+		"enzyme-adapter-react-16": "^1.2.0",
+		"enzyme-to-json": "^3.3.4",
+		"jest": "^23.5.0",
+		"live-server": "^1.2.0",
+		"moment": "^2.22.2",
+		"momentjs": "^2.0.0",
+		"node-sass": "^4.9.3",
+		"normalize": "^0.3.1",
+		"normalize.css": "^8.0.0",
+		"raf": "^3.4.0",
+		"react": "^16.4.2",
+		"react-addons-shallow-compare": "^15.6.2",
+		"react-dates": "^17.2.0",
+		"react-dom": "^16.4.2",
+		"react-redux": "^5.0.7",
+		"react-router-dom": "^4.3.1",
+		"react-test-renderer": "^16.4.2",
+		"redux": "^4.0.0",
+		"redux-devtools-extension": "^2.13.5",
+		"redux-promise": "^0.6.0",
+		"sass-loader": "^7.1.0",
+		"style-loader": "^0.22.1",
+		"uuid": "^3.3.2",
+		"webpack": "^4.16.5",
+		"webpack-dev-server": "^3.1.5"
+	},
+	"devDependencies": {
+		"webpack-cli": "^3.1.0"
+	}
+}
