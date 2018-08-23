@@ -6,6 +6,8 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "webpack",
+		"build:dev": "webpack",
+		"build:prod": "webpack -p --env production",
 		"dev-server": "webpack-dev-server",
 		"test": "jest --config=jest.config.json",
 		"live-test": "jest --watchAll"
@@ -22,8 +24,10 @@
 		"enzyme": "^3.4.4",
 		"enzyme-adapter-react-16": "^1.2.0",
 		"enzyme-to-json": "^3.3.4",
+		"extract-text-webpack-plugin": "^3.0.2",
 		"jest": "^23.5.0",
 		"live-server": "^1.2.0",
+		"mini-css-extract-plugin": "^0.4.2",
 		"moment": "^2.22.2",
 		"momentjs": "^2.0.0",
 		"node-sass": "^4.9.3",
