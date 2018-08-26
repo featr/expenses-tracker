@@ -8,6 +8,7 @@ import thunk from 'redux-thunk';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
+import { startSetExpenses } from './actions/expenses';
 
 import AppRouter from './routers/AppRouter';
 import reducer from './store/configureStore';
@@ -17,9 +18,14 @@ const composeEnhancers = composeWithDevTools({});
 
 export const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 
-ReactDOM.render(
+const jsx = (
 	<Provider store={store}>
 		<AppRouter />
-	</Provider>,
-	document.querySelector('#app')
+	</Provider>
 );
+
+ReactDOM.render(<p>Loading...</p>, document.querySelector('#app'));
+
+store.dispatch(startSetExpenses()).then(() => {
+	ReactDOM.render(jsx, document.querySelector('#app'));
+});
