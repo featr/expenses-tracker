@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render Header correctly 1`] = `
-<div>
+<header>
   <h1>
     Expensify
   </h1>
@@ -9,7 +9,7 @@ exports[`should render Header correctly 1`] = `
     activeClassName="is-active"
     aria-current="page"
     exact={true}
-    to="/"
+    to="/dashboard"
   >
     Dashboard
   </NavLink>
@@ -20,5 +20,10 @@ exports[`should render Header correctly 1`] = `
   >
     Add Expense
   </NavLink>
-</div>
+  <button
+    onClick={[MockFunction]}
+  >
+    Logout
+  </button>
+</header>
 `;
