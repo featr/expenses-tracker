@@ -3,3 +3,5 @@ yarn.lock
 public/dist/
 .env.test
 .env.development
+.DS_STORE
+public/.DS_STORE

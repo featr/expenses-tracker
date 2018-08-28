@@ -13,6 +13,7 @@ import { login, logout } from './actions/auth';
 import AppRouter, { history } from './routers/AppRouter';
 import reducer from './store/configureStore';
 import { firebase } from './firebase/firebase';
+import LoadingPage from './components/LoadingPage';
 
 const composeEnhancers = composeWithDevTools({});
 
@@ -32,7 +33,7 @@ const renderApp = () => {
 	}
 };
 
-ReactDOM.render(<p>Loading...</p>, document.querySelector('#app'));
+ReactDOM.render(<LoadingPage />, document.querySelector('#app'));
 
 firebase.auth().onAuthStateChanged(user => {
 	if (user) {
