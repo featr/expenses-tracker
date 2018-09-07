@@ -4,6 +4,9 @@
 	"main": "index.js",
 	"author": "evule",
 	"license": "MIT",
+	"engines": {
+		"node": "10.8.0"
+	},
 	"scripts": {
 		"start": "node server/server.js",
 		"heroku-postbuild": "yarn run build:prod",
