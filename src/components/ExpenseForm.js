@@ -9,6 +9,7 @@ class ExpenseForm extends React.Component {
 		this.state = {
 			description: props.expense ? props.expense.description : '',
 			note: props.expense ? props.expense.note : '',
+			category: props.expense ? props.expense.category : 'Food&Dining',
 			amount: props.expense ? (props.expense.amount / 100).toString() : '',
 			createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
 			calendarFocused: false,
@@ -55,6 +56,15 @@ class ExpenseForm extends React.Component {
 		}
 	};
 
+	onCategoryChange = e => {
+		const category = e.target.value;
+		this.setState(() => {
+			return {
+				category,
+			};
+		});
+	};
+
 	onFocusChange = ({ focused }) => {
 		this.setState(() => {
 			return {
@@ -68,13 +78,14 @@ class ExpenseForm extends React.Component {
 
 		if (!this.state.description || !this.state.amount) {
 			this.setState(() => ({
-				error: 'Please fill in the required fields.',
+				error: 'Please fill in description and amount',
 			}));
 		} else {
 			this.setState(() => ({ error: '' }));
 			this.props.onSubmit({
 				description: this.state.description,
 				amount: parseFloat(this.state.amount, 10) * 100,
+				category: this.state.category,
 				createdAt: this.state.createdAt.valueOf(),
 				note: this.state.note,
 			});
@@ -100,6 +111,18 @@ class ExpenseForm extends React.Component {
 					value={this.state.amount}
 					onChange={this.onAmountChange}
 				/>
+				<select className="select" value={this.state.category} onChange={this.onCategoryChange}>
+					<option value="Food&Dining">Food & Dining</option>
+					<option value="Entertainment">Entertainment</option>
+					<option value="Shopping">Shopping</option>
+					<option value="Health&Fitness">Health & Fitness</option>
+					<option value="Bills&Utilities">Bills & Utilities</option>
+					<option value="Auto&Transport">Auto & Transport</option>
+					<option value="Travel">Travel</option>
+					<option value="Kids">Kids</option>
+					<option value="Gifts&Donations">Gifts & Donations</option>
+					<option value="Taxes">Taxes</option>
+				</select>
 				<SingleDatePicker
 					date={this.state.createdAt}
 					onDateChange={this.onDateChange}

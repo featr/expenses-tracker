@@ -47,6 +47,10 @@
 	font-size: 1.4rem;
 }
 
+h3 span.list-item__subtitle {
+	font-weight: 500;
+}
+
 .list-item__data {
 	margin: $s-size 0 0 0;
 	@media (min-width: $desktop-breakpoint) {
