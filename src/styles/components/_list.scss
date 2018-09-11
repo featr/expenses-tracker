@@ -7,6 +7,12 @@
 	padding: $s-size $m-size;
 }
 
+.list-container {
+	height: 620px;
+	overflow: auto;
+	margin-bottom: 32px;
+}
+
 .list-item {
 	display: flex;
 	flex-direction: column;

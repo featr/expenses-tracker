@@ -2713,6 +2713,10 @@ find-up@^3.0.0:
   dependencies:
     locate-path "^3.0.0"
 
+firebase-react-paginated@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/firebase-react-paginated/-/firebase-react-paginated-1.0.3.tgz#5ef2ff94d686e2338a69dd1d4ff1ff0193b72740"
+
 firebase@^5.4.1:
   version "5.4.1"
   resolved "https://registry.yarnpkg.com/firebase/-/firebase-5.4.1.tgz#1e2c12f682771f4b6a1d78255af86dd8dc28f0e7"
